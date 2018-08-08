@@ -15,17 +15,17 @@ echo env.DEPLOY_ENV1
 node {
   dir('camunda_common') {
 		git branch: 'release/18.08', 
-			credentialsId: 'vp2592:June@2017', 
+			credentialsId: 'vp2592', 
 			url: 'https://codecloud.web.att.com/scm/st_oce/camunda_common.git'
     }
   dir('camunda_entertainment_group') {
 		git branch: 'release/1808', 
-			credentialsId: 'vp2592:June@2017', 
+			credentialsId: 'vp2592', 
 			url: 'https://codecloud.web.att.com/scm/st_oce/camunda_entertainment_group.git'
     }
   dir('oce_framework') {
 		git branch: 'release/18.08', 
-			credentialsId: 'vp2592:June@2017', 
+			credentialsId: 'vp2592', 
 			url: 'https://codecloud.web.att.com/scm/st_oce/oce_framework.git'
     }
 }
