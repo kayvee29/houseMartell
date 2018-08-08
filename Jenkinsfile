@@ -13,14 +13,20 @@ properties([
 echo env.DEPLOY_ENV1
 
 node {
-  dir('Lannister') {
-        git url: 'https://github.com/kayvee29/houseLannister.git'
+  dir('camunda_common') {
+		git branch: 'release/18.08', 
+			credentialsId: 'vp2592:June@2017', 
+			url: 'https://codecloud.web.att.com/scm/st_oce/camunda_common.git'
     }
-  dir('ajsc5') {
-        git url: 'https://github.com/kayvee29/ajsc5.git'
+  dir('camunda_entertainment_group') {
+		git branch: 'release/1808', 
+			credentialsId: 'vp2592:June@2017', 
+			url: 'https://codecloud.web.att.com/scm/st_oce/camunda_entertainment_group.git'
     }
-  dir('stark') {
-        git url: 'https://github.com/kayvee29/house-stark.git'
+  dir('oce_framework') {
+		git branch: 'release/18.08', 
+			credentialsId: 'vp2592:June@2017', 
+			url: 'https://codecloud.web.att.com/scm/st_oce/oce_framework.git'
     }
 }
 
@@ -31,11 +37,13 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
+         //       sh 'mvn -f initial/pom.xml clean compile'
             }
         }
         stage('Test') {
             steps {
                 echo 'Testing..'
+        //        sh 'mvn -f initial/pom.xml clean test'
             }
         }
         stage('CodeCoverage') {
@@ -46,11 +54,13 @@ pipeline {
         stage('CodeAnalysis') {
             steps {
                 echo 'Code Analyzing....'
+             //   sh 'mvn sonar:sonar -f initial/pom.xml -Dsonar.host.url=http://localhost:9000 -Dsonar.login=7d69663e1b687e7dcce539aa3c18c2b72312a91b'
             }
         }
         stage('CodePackaging') {
             steps {
                 echo 'Code Packaging....'
+          //      sh 'mvn -f initial/pom.xml clean package'
             }
         }
         stage('DeployToDev') {
