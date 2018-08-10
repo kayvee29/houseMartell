@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Translator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body style="background-color : grey !important">
+    {% if message %}
+        <p>{{ message }}</p>
+    {% endif %}
+    <div class="container jumbotron">
+        <h1 style="color: #007bff">Translation App</h1>
+        <h5 style="color: grey">This translation app is build on Flask using TextBlob library</h5>
+        <hr class="my-4">
+    <form action="http://localhost:5000/langui/" method="post">
+        <div class='form-group'>
+            <label for="username"><h5 style="color: #007bff">Sentence</h5></label>
+            <input class="form-control form-control-md" type="text" name="sent" placeholder="Enter text to be translated">
+        </div>
+        <!--<p>-->
+            <!--<label for="text">Language</label>-->
+            <!--<input type="text" name="lang">-->
+        <!--</p>-->
+        <div class='form-group'>
+        <label for="text"><h5 style="color: #007bff">Language</h5></label>
+        <select class="custom-select" name="lang">
+            <option value="te">Telugu</option>
+            <option value="hi">Hindi</option>
+            <option value="de" selected>German</option>
+            <option value="es">Spanish</option>
+            <option value="ar">Arabic</option>
+            <option value="ta">Tamil</option>
+        </select>
+        </div>
+            <input class="btn btn-primary btn-lg" type="submit">
+    </form>
+</div>
+</body>
+</html>
+
