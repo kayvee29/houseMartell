@@ -1,10 +1,12 @@
-*Set the Flask main.py path to initiate Flask Run*
+*To run the application on the server*
 
-1. export FLASK_APP=sample.py
+1. Set the Flask main.py path to initiate Flask Run
 
-*Run the application with the command:*
+    export FLASK_APP=sample.py
 
-2. flask run
+2. Run the application with the command:
+
+    flask run
 
 *To run the application on Docker container:*
 
