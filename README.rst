@@ -1,4 +1,4 @@
-*To run the application on the server*
+**To run the application on the server:**
 
 1. Set the Flask main.py path to initiate Flask Run
 
@@ -8,7 +8,7 @@
 
     flask run
 
-*To run the application on Docker container:*
+**To run the application on Docker container:**
 
 1. Build the docker container by running the following Command:
 
