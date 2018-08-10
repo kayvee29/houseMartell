@@ -10,8 +10,8 @@
 
 1. Build the docker container by running the following Command:
 
-sudo docker build -t flaskapp .
+    sudo docker build -t flaskapp .
 
 2. Run the container on the server using the following command:
 
-sudo docker run -it --net=host -d -p 5000:5000 flaskapp:latest
+    sudo docker run -it --net=host -d -p 5000:5000 flaskapp:latest
