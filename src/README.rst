@@ -1,6 +1,6 @@
 *Set the Flask main.py path to initiate Flask Run*
 
-1. export FLASK_APP=sample.py flask run
+1. export FLASK_APP=sample.py
 
 *Run the application with the command:*
 
