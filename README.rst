@@ -16,4 +16,4 @@
 
 2. Run the container on the server using the following command:
 
-    sudo docker run -it --net=host -d -p 5000:5000 flaskapp:latest
+    sudo docker run -it --net=host -d -v $HOSTDIR:/app-p 5000:5000 flaskapp:latest
