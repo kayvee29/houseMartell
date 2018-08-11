@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Signup</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body style="background-color : grey !important">
+<div class="container jumbotron" style="text-align: center">
+    <div style="color: #007bff">
+    <h1>Sign Up!</h1>
+    <h5>Please enter the below details to sign up!</h5>
+    </div>
+    <hr class="my-4">
+    <form class="form-group">
+
+    <label class="sr-only" for="inlineFormInputGroupUsername2">Username</label>
+        <div class="input-group mb-2 mr-sm-2">
+        <div class="input-group-prepend">
+        <div class="input-group-text" style="width: 100px">Username</div>
+        </div>
+            <input type="email" class="form-control" id="inlineFormInputGroupUsername2" placeholder="Please provide a valid email address" required>
+        </div>
+        <label class="sr-only" for="inlineFormInputGroupUsername2">First Name</label>
+        <div class="input-group mb-2 mr-sm-2">
+        <div class="input-group-prepend">
+        <div class="input-group-text" style="width: 100px">First Name</div>
+        </div>
+            <input type="text" class="form-control" id="inlineFormInputGroupUsername2" required>
+        </div>
+        <label class="sr-only" for="inlineFormInputGroupUsername2">Last Name</label>
+        <div class="input-group mb-2 mr-sm-2">
+        <div class="input-group-prepend">
+        <div class="input-group-text" style="width: 100px">Last Name</div>
+        </div>
+            <input type="text" class="form-control" id="inlineFormInputGroupUsername2" required>
+        </div>
+        <label class="sr-only" for="inlineFormInputGroupUsername2">password</label>
+        <div class="input-group mb-2 mr-sm-2">
+        <div class="input-group-prepend">
+        <div class="input-group-text" style="width: 100px">Password</div>
+        </div>
+            <input type="password" class="form-control" id="inlineFormInputGroupUsername2" required>
+        </div>
+       <label class="sr-only" for="inlineFormInputGroupUsername2">password2</label>
+        <div class="input-group mb-2 mr-sm-2">
+        <div class="input-group-prepend">
+        <div class="input-group-text" style="width: 100px">Re-Enter</div>
+        </div>
+            <input type="password" class="form-control" id="inlineFormInputGroupUsername2" required>
+        </div>
+
+        <label class="sr-only" for="inlineFormInputGroupUsername2">dob</label>
+        <div class="input-group mb-2 mr-sm-2">
+        <div class="input-group-prepend">
+        <div class="input-group-text" style="width: 100px">DOB</div>
+        </div>
+            <input type="date" class="form-control" id="inlineFormInputGroupUsername2" required>
+        </div>
+
+        <label class="sr-only" for="inlineFormInputGroupUsername2">Phone</label>
+        <div class="input-group mb-2 mr-sm-2">
+        <div class="input-group-prepend">
+        <div class="input-group-text" style="width: 100px">Phone</div>
+                <select name="cars" class="input-group-text" style="width: 100px; font-size: 13px">>
+                        <option value="volvo">US (+1)</option>
+                        <option value="saab">IN (+91)</option>
+                        <option value="fiat">PAK (+92)</option>
+                        <option value="audi">Audi</option>
+                </select>
+        </div>
+            <input type="tel" class="form-control" id="inlineFormInputGroupUsername2" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required /><span class="validity"></span>
+        </div>
+  <!--<div class="form-check mb-2 mr-sm-2">-->
+    <!--<input class="form-check-input" type="checkbox" id="inlineFormCheck">-->
+        <!--<label class="form-check-label" for="inlineFormCheck">-->
+            <!--Remember me-->
+        <!--</label>-->
+    <!--</div>-->
+
+    <button type="submit" class="btn btn-primary mb-2">Submit</button>
+    </form>
+
+</div>
+
+</body>
+</html>

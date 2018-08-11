@@ -10,6 +10,11 @@ app = Flask(__name__)
 def homepage(name=None):
     return render_template('home.html')
 
+@app.route("/signup", methods=['GET'])
+
+def signup(name=None):
+    return render_template('signup.html')
+
 @app.route("/translate", methods=['GET'])
 
 def translate(name=None):
