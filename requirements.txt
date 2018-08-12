@@ -2,3 +2,4 @@ numpy
 textblob
 Flask
 flask-login
+flask-sqlalchemy
