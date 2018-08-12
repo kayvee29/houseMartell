@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flaskblog
+  labels:
+    app: flaskblog
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: flaskblog
+  template:
+    metadata:
+      labels:
+        app: flaskblog
+    spec:
+      containers:
+        - name: flaskblog
+          image: penmetsa29/flaskapp
+          ports:
+            - containerPort: 5000

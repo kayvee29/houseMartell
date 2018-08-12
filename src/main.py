@@ -2,6 +2,7 @@ from flask import Flask, jsonify, request, render_template
 import json
 from textblob import TextBlob
 from classes import calculation
+from flask_login import LoginManager
 
 app = Flask(__name__)
 
@@ -14,6 +15,11 @@ def homepage(name=None):
 
 def signup(name=None):
     return render_template('signup.html')
+
+@app.route("/login", methods=['GET'])
+
+def login(name=None):
+    return render_template('login.html')
 
 @app.route("/translate", methods=['GET'])
 
@@ -55,7 +61,9 @@ def langui():
     # w = Word(request.json['word'])
     blob = TextBlob(request.form.get('sent'))
     # blob = TextBlob(request.form['sentence'])
-    return str(blob.translate(from_lang='en', to=request.form.get('lang')))
+    # return str(blob.translate(from_lang='en', to=request.form.get('lang')))
+    return "{}".format(str(blob.translate(from_lang='en', to=request.form.get('lang'))))
+
     # print(str(blob.sentiment))
     # return str(blob.translate(from_lang='en', to =request.form['language']))
 
